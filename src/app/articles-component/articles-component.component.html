@@ -1,0 +1,15 @@
+<p>{{titre}}</p>
+<div class="input-group flex-nowrap row-column ">
+    <span class="input-group-text" id="addon-wrapping">@</span>
+    <input type="text" [(ngModel)]="nbrArticle" class="form-control"
+      placeholder={{nbrArticle}} aria-label="Username" aria-describedby="addon-wrapping">
+  </div>
+
+<div class="row-column d-inline-block" *ngFor="let Article of listeArticles; let i = index">
+    <div class="card me-2 mt-2 " style="width: 18rem;" *ngIf="Article.categorie!='Travail'&& (nbrArticle-1)>=i||nbrArticle==0">
+
+        <h5 class="card-title" [ngStyle]="{'color': Article.categorie==='Education'? 'blue':'black' }">{{Article.auteur}}</h5>
+        <h5 class="card-title">{{Article.date}}</h5>
+        <p class="card-text">{{Article.contenu}}</p>
+</div>
+</div>

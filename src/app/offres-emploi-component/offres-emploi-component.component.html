@@ -1,20 +1,19 @@
-<div class="container-lg ">
 
   <div class="input-group flex-nowrap row-column ">
     <span class="input-group-text" id="addon-wrapping">@</span>
-    <input type="text" #nomEntreprise (keyup)="filter(nomEntreprise.value)" class="form-control"
+    <input type="text" [(ngModel)]="nomEntreprise" class="form-control"
       placeholder="nom de l'entreprise" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
   <div class="row-column d-inline-block" *ngFor="let Emploi of listeEmploi">
     <div class="card me-2 mt-2 " style="width: 18rem;"
-      *ngIf="Emploi.entreprise.includes(nomEntreprise.value)||nomEntreprise.value===''">
+      *ngIf="Emploi.entreprise.includes(nomEntreprise)||nomEntreprise===''">
       <img src="../../assets/inetum.svg" class="card-img-top" alt="..." *ngIf="Emploi.entreprise==='inetum'">
       <img src="../../assets/vermeg.png" class="card-img-top" alt="..." *ngIf="Emploi.entreprise==='vermeg'">
       <img src="../../assets/sopra.png" class="card-img-top" alt="..." *ngIf="Emploi.entreprise==='sopra'">
       <div class="card-body">
         <h5 class="card-title">{{Emploi.titre}}</h5>
         <p class="card-text">{{Emploi.entreprise}}</p>
-        <button [disabled]="!Emploi.etat" type="button" class="btn btn-primary">Postuler</button>
+        <button [disabled]="!Emploi.etat" type="button" class="btn btn-primary" >Postuler</button>
       </div>
     </div>
   </div>
@@ -29,4 +28,3 @@
         </div>
     </div>
   </div>
-</div>

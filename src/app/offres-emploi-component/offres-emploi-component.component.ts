@@ -11,7 +11,7 @@ export class OffresEmploiComponentComponent implements OnInit {
 
  listeEmploi:Array<Emploi>=[new Emploi("123","developpeur Java","vermeg",false),new Emploi("124","developpeur php","vermeg",false),new Emploi("123","developpeur .net","inetum",true),new Emploi("123","developpeur Java","inetum",false),new Emploi("123","developpeur Java","inetum",false),new Emploi("123","developpeur Java","inetum",false),new Emploi("123","developpeur Java","sopra",false),new Emploi("123","developpeur Java","sopra",true)];
  nbrDePosteDispo!: number;
- nomEntreprise!:string;
+ nomEntreprise='';
 calculNbrDePosteDispo(listeEmploi:Array<Emploi>){
   this.nbrDePosteDispo=0;
   
@@ -28,6 +28,8 @@ calculNbrDePosteDispo(listeEmploi:Array<Emploi>){
 filter(nomEntreprise:string){
   this.nomEntreprise=nomEntreprise;
 }
+
+
   constructor() { }
 
   ngOnInit(): void {
