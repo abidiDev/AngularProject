@@ -8,6 +8,7 @@ import { OffresEmploiComponentComponent } from './offres-emploi-component/offres
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArticlesComponentComponent } from './articles-component/articles-component.component';
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ArticlesComponentComponent } from './articles-component/articles-compon
     HeaderComponent,
     FooterComponent,
     ArticlesComponentComponent,
+    TemplateDrivenFormComponentComponent,
   ],
   imports: [
     BrowserModule,
