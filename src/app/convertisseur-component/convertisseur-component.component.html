@@ -1,0 +1,10 @@
+<p>convertisseur-component works!</p>
+
+
+      <label for="inputTypecarte" class="col-sm-2 col-form-label">Montant</label>
+      <div class="col-sm-10">
+        <input type="text" name="carteType" class="form-control" id="inputTypecarte" [(ngModel)]="montant">
+        <app-to-euro-convert-component  [montantP]="montant" (converted)="convertDinarEuro($event)"></app-to-euro-convert-component>
+         <p>dispalying from parent  {{montantFromChild}}</p>
+
+        </div>

@@ -9,6 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArticlesComponentComponent } from './articles-component/articles-component.component';
 import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
+import { ToEuroConvertComponentComponent } from './to-euro-convert-component/to-euro-convert-component.component';
+import { ConvertisseurComponentComponent } from './convertisseur-component/convertisseur-component.component';
+import { ActorsComponentComponent } from './actors-component/actors-component.component';
+import { ActorComponentComponent } from './actor-component/actor-component.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { TemplateDrivenFormComponentComponent } from './template-driven-form-com
     FooterComponent,
     ArticlesComponentComponent,
     TemplateDrivenFormComponentComponent,
+    ToEuroConvertComponentComponent,
+    ConvertisseurComponentComponent,
+    ActorsComponentComponent,
+    ActorComponentComponent,
   ],
   imports: [
     BrowserModule,
